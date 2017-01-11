@@ -31,21 +31,33 @@ public int findFirstVowel(String sWord)
 	    else if(sWord.substring(i, i+1).equals("o") == true)
 	    {
 	      return i;
-	    }
-
-	    
+	    } 
 	}
+
 	for(int i = 0; i < sWord.length(); i++)
 	{
 		if(sWord.substring(0, 2).equals("qu") == true)
 		{
-			return i+2;
+			return i+5;
 		}
 	}
 
 	return -1;
 }
 
+/*
+public int findSpace(String sWord)
+{
+	for(int i = 0; i < sWord.length(); i++)
+	{
+		if(sWord.substring(i, i+1).equals(" ") == true)
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+*/
 public String pigLatin(String sWord)
 //precondition: sWord is a valid String of length greater than 0
 //postcondition: returns the pig latin equivalent of sWord
@@ -58,8 +70,7 @@ public String pigLatin(String sWord)
 	{
 		return sWord + "way";
 	}
-
-	else if(findFirstVowel(sWord) == 2)
+	else if(findFirstVowel(sWord) == 5)
 	{
 		return sWord.substring(2) + "qu" + "ay";
 	}
@@ -67,5 +78,4 @@ public String pigLatin(String sWord)
 	{
 		return sWord.substring(findFirstVowel(sWord)) + sWord.substring(0,findFirstVowel(sWord)) + "ay";
 	}
-
 }
