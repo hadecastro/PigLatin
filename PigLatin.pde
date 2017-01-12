@@ -45,19 +45,7 @@ public int findFirstVowel(String sWord)
 	return -1;
 }
 
-/*
-public int findSpace(String sWord)
-{
-	for(int i = 0; i < sWord.length(); i++)
-	{
-		if(sWord.substring(i, i+1).equals(" ") == true)
-		{
-			return i;
-		}
-	}
-	return -1;
-}
-*/
+
 public String pigLatin(String sWord)
 //precondition: sWord is a valid String of length greater than 0
 //postcondition: returns the pig latin equivalent of sWord
